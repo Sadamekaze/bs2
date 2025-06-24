@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasaraGUI", "BasaraGUI\BasaraGUI.csproj", "{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YZ2Wrapper", "BasaraGUI\YZ2Wrapper\YZ2Wrapper\YZ2Wrapper.vcxproj", "{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Debug|x64.ActiveCfg = Debug|x64
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Debug|x64.Build.0 = Debug|x64
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Debug|x86.ActiveCfg = Debug|x86
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Debug|x86.Build.0 = Debug|x86
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Release|x64.ActiveCfg = Release|x64
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Release|x64.Build.0 = Release|x64
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Release|x86.ActiveCfg = Release|x86
+		{0F1D7DE2-EADD-4C5B-BEA6-CD1211B634D5}.Release|x86.Build.0 = Release|x86
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Debug|x64.ActiveCfg = Debug|x64
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Debug|x64.Build.0 = Debug|x64
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Debug|x86.Build.0 = Debug|Win32
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Release|x64.ActiveCfg = Release|x64
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Release|x64.Build.0 = Release|x64
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Release|x86.ActiveCfg = Release|Win32
+		{1BAEF1EC-BD15-7218-5169-2F39F3DDF7F0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D62430D8-765C-4957-9F76-5A385EADFC20}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BasaraGUI\YZ2Wrapper\YZ2Wrapper\YZ2\YZ2.vcxitems*{1baef1ec-bd15-7218-5169-2f39f3ddf7f0}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

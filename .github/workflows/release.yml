@@ -1,0 +1,45 @@
+name: .NET Framework Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore BasaraGUI.sln
+
+      - name: Build the project
+        run: msbuild /p:Configuration=Release /p:DebugType=None BasaraGUI.sln
+
+      - name: Package the application (exclude .config & .pdb)
+        run: |
+          $files = Get-ChildItem -Path .\BasaraGUI\bin\x64\Release\* -File | Where-Object { $_.Extension -notin '.config', '.pdb' }
+          Compress-Archive -Path $files.FullName -DestinationPath BasaraGUI-${{ github.ref_name }}.zip
+        shell: pwsh
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          body: |
+            Automatic release from GitHub Actions workflows.
+          files: BasaraGUI-${{ github.ref_name }}.zip
